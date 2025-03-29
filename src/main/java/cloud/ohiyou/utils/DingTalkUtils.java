@@ -57,7 +57,7 @@ public class DingTalkUtils {
                 case "text":
                     //定义文本内容
                     OapiRobotSendRequest.Text text = new OapiRobotSendRequest.Text();
-                    text.setContent("HiFiNiBot签到信息:"+messageTitle+messageText);
+                    text.setContent("HiFiNiBot签到信息警告:"+messageTitle+messageText);
                     //设置消息类型
                     req.setMsgtype("text");
                     req.setText(text);
@@ -66,8 +66,8 @@ public class DingTalkUtils {
                 case "markdown":
                     // 定义markdown内容
                     OapiRobotSendRequest.Markdown markdown = new OapiRobotSendRequest.Markdown();
-                    markdown.setTitle("HiFiNiBot消息通知");
-                    markdown.setText("# HiFiNiBot签到消息通知 \n ## "+messageTitle+" \n"+messageText);
+                    markdown.setTitle("HiFiNiBot消息警告");
+                    markdown.setText("# HiFiNiBot签到消息通知警告 \n ## "+messageTitle+" \n"+messageText);
                     req.setMsgtype("markdown");
                     req.setMarkdown(markdown);
                     break;
